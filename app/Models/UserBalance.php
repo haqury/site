@@ -17,7 +17,7 @@ class UserBalance extends RpcBalance
     public $balance;
     public $user_id;
     
-    public static function getUserBalance(int $userId)
+    public static function getUserBalance(int $userId): self
     {
         $response = self::getRpc()->send(self::METHOD_PREFIX . self::USER_BALANCE_METHOD,
             [

@@ -21,7 +21,11 @@ class History extends RpcBalance
     public $balance;
     public $user_id;
 
-    public static function getLimit($limit = 50)
+    /**
+     * @param int $limit
+     * @return self[]
+     */
+    public static function getLimit($limit = 50): array
     {
         $response = self::getRpc()->send(self::METHOD_PREFIX . self::METHOD, ['limit' => $limit]);
         if (!$response->isSuccess()) {
