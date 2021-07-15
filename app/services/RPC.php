@@ -14,7 +14,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
 
 class RPC
-{
+{    
     const JSON_RPC_VERSION = '2.0';
 
     const METHOD_URI = 'http://127.0.0.1:8001/data/json-rpc';
